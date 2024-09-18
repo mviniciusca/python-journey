@@ -19,6 +19,9 @@ print(type(age)) # => <class 'int'> => int
 print(type(point)) # => <class 'float'> => float
 print(type(approved)) # => <class 'bool'> =>  bool
 
+#Input and f string
+firstName = input("Your Name: ")
+print(f"Hello, {firstName}! Welcome to our first Python project!")
 
 
 
