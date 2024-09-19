@@ -1,3 +1,5 @@
+## Media
+
 media1 = float(input("Note 1: "))
 media2 = float(input("Note 2: "))
 media3 = float(input("Note 3: "))
