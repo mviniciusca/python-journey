@@ -10,7 +10,7 @@ age = int(input("Enter your age: "))
 
 if(age < 12):
     print("Your movie is the first one")
-elif (age >= 12 and age <= 18):
+elif (age >= 12 and age < 18):
     print("Your movie is the second one")
 else:
     print("Your movie is the third one")
