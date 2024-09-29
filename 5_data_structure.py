@@ -12,5 +12,6 @@ List
 '''
 
 objects = ['shoes', 'cup', 'bottle', 'spoon']
+objects = [item.upper() for item in objects]
 
-print(objects[2])
+print(objects)
