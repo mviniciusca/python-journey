@@ -1,27 +1,32 @@
 '''
 IMC Calculator
 '''
-
 def imc():
     height = float(input("Enter your height (m): "))
-    weight = float(input("Enter your weight (Kg): "))    
+    weight = float(input("Enter your weight (Kg): "))
 
-    result = weight / (height ** 2)
-    result = round(result, 2)
-    
+    ## Check if the value is not zero
+    if height <= 0 or weight <= 0:
+        print("Enter a valid value")
+        height = float(input("Enter your height (m): "))
+        weight = float(input("Enter your weight (Kg): "))
+ 
+        result = weight / (height ** 2)
+        result = round(result, 2)    
 
     if result <= 18.5:
-        level = 'Under Normal'
+            level = 'Under Normal'
     elif 18.6 <= result <= 24.9:
-        level = 'Normal' 
+            level = 'Normal' 
     elif 25.0 <= result <= 29.9:
-        level = 'Overweight'
+            level = 'Overweight'
     elif 30.0 <= result <= 34.9:
-        level = 'Obesity Level 1'
+            level = 'Obesity Level 1'
     elif 35.0 <= result <= 39.9:
-       level = 'Obesity Level 2'
+            level = 'Obesity Level 2'
     else:
-        level = 'Obesity Level 3' 
+            level = 'Obesity Level 3' 
 
     print(f'Your IMC is: {result} and it\'s mean that your level is {level} according to OMS')
+
 imc()
