@@ -12,7 +12,7 @@ def imc():
         height = float(input("Enter your height (m): "))
         weight = float(input("Enter your weight (Kg): "))
     ## Get the result
-        result = weight / (height ** 2)
+        result = weight / (height ** 2) ## ** square
         result = round(result, 2)    
     ## Classification
     if result <= 18.5:
