@@ -39,12 +39,4 @@ def classification(result):
             level = 'Obesity Level 3' 
     return level
 
-
-
-
-
 imc()
- 
-   
-
-
