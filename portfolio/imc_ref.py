@@ -1,5 +1,5 @@
 '''
-IMC
+IMC with functions
 '''
 
 def validate(x,y):
