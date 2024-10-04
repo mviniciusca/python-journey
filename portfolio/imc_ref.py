@@ -38,4 +38,5 @@ def imc():
     imc = round(imc_calc(x,y),2)
     result = classification(imc)
     print(f"Your IMC is: {imc} and your level is {result}") 
+    
 imc()
