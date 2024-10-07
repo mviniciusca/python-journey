@@ -4,9 +4,9 @@ IMC with functions
 
 def validate(weight, height):
         while weight <= 0 or height <= 0:
-                print(input("Enter a valid value"))
-                weight = float(input("Enter your Weight"))
-                height = float(input("Enter your Height"))
+                print(input("Enter a valid value! "))
+                weight = float(input("Enter your Weight (m): "))
+                height = float(input("Enter your Height (Kg): "))
         return weight, height      
 
 def imc_calc(weight,height):
@@ -28,8 +28,8 @@ def classification(result):
     return level
 
 def imc():
-        height = float(input("Enter your height: "))
-        weight = float(input("Enter your weight: "))
+        height = float(input("Enter your height: (m) "))
+        weight = float(input("Enter your weight: (Kg) "))
 
         weight, height = validate(weight, height)
         imc = round(imc_calc(weight, height), 2)
