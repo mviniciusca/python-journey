@@ -2,18 +2,15 @@
 IMC with functions
 '''
 
-def validate(x,y):
-    if x <= 0 or y <= 0:
-        print("Please, enter a valid value")
-        y = float(input("Enter your heigh: "))
-        x = float(input("Enter your weight: "))
-        validate(x,y)
-    else:
-          return x,y
+def validate(weight, height):
+        while weight <= 0 or height <= 0:
+                print(input("Enter a valid value"))
+                weight = float(input("Enter your Weight"))
+                height = float(input("Enter your Height"))
+        return weight, height      
 
-def imc_calc(x,y):
-    result = x /(y ** 2)
-    return result
+def imc_calc(weight,height):
+    return weight / (height ** 2)
     
 def classification(result):
     if result <= 18.5:
@@ -31,12 +28,12 @@ def classification(result):
     return level
 
 def imc():
-    y = float(input("Enter your heigh: "))
-    x = float(input("Enter your weight: "))
+        height = float(input("Enter your height: "))
+        weight = float(input("Enter your weight: "))
 
-    validate(x,y)
-    imc = round(imc_calc(x,y),2)
-    result = classification(imc)
-    print(f"Your IMC is: {imc} and your level is {result}") 
-    
+        weight, height = validate(weight, height)
+        imc = round(imc_calc(weight, height), 2)
+        result = classification(imc)
+        print(f"Your IMC is: {imc} and your level is {result}") 
+
 imc()
