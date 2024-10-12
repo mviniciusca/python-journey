@@ -12,17 +12,17 @@ def imc_calc(weight,height):
     
 def classification(result):
     if result <= 18.5:
-            level = 'Under Normal'
+            level = 'Abaixo do Peso'
     elif 18.6 <= result <= 24.9:
             level = 'Normal' 
     elif 25.0 <= result <= 29.9:
-            level = 'Overweight'
+            level = 'Sobrepeso'
     elif 30.0 <= result <= 34.9:
-            level = 'Obesity Level 1'
+            level = 'Obesidade Grau 3'
     elif 35.0 <= result <= 39.9:
-            level = 'Obesity Level 2'
+            level = 'Obesidade Grau 3'
     else:
-            level = 'Obesity Level 3' 
+            level = 'Obesidade Grau 3' 
     return level
 
 def imc(weight, height):
@@ -32,4 +32,4 @@ def imc(weight, height):
         weight, height = validate(weight, height)
         imc = round(imc_calc(weight, height), 2)
         result = classification(imc)
-        return (f"Your IMC is: {imc} and your level is {result}")
+        return (f"Seu IMC é: {imc} e seu nível é considerado {result} pela OMS")

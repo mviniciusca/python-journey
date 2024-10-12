@@ -15,12 +15,15 @@ def imc():
     imc = None
 
     if request.method == 'POST':
-        height = request.form['height']
-        weight = request.form['weight']
-        imc = imc_ref.imc(weight, height)
+        height = float(request.form['height'])
+        weight = float(request.form['weight'])
+        if weight <= 0 or height <= 0:
+            error = 'Erro: Digite um valor maior que zero.'
+        else:
+            imc = imc_ref.imc(weight, height)
     else:
-        error = 'Invalid Values'
-    return render_template('imc.html', methods=["GET", "POST"],error=error, imc=imc)
+        error = 'Erro: Digite um valor válido!'
+    return render_template('imc.html', methods=["GET", "POST"],error=error, imc=imc, height=height, weight=weight)
 
 if __name__ == '__main__':
     app.run(debug=True)
