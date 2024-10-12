@@ -5,23 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: "Inter", sans-serif;
+            background-color: #fcfcfc;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .container {
             background-color: white;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(204, 204, 204, 0.1);
             width: 300px;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -54,7 +63,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #6842d1;
             color: white;
             padding: 0.75rem;
             border: none;
@@ -64,7 +73,23 @@
         }
 
         button:hover {
-            background-color: #2943d8;
+            background-color: #4d319b;
+        }
+
+        .app-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .app-footer p {
+            margin-right: 10px;
+        }
+
+        .icon-big {
+            font-size: 24px;
+            color: #333;
         }
     </style>
 </head>
@@ -92,6 +117,14 @@
             </div>
         </form>
     </div>
+    <footer class="app-footer">
+        <p>Desenvolvido por Marcos Coelho</p>
+        <a href="https://github.com/mviniciusca" target="_blank" rel="noopener noreferrer">
+            <ion-icon class="icon-big" name="logo-github"></ion-icon>
+        </a>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
