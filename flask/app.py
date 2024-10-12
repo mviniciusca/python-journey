@@ -21,8 +21,6 @@ def imc():
             error = 'Erro: Digite um valor maior que zero.'
         else:
             imc = imc_ref.imc(weight, height)
-    else:
-        error = 'Erro: Digite um valor válido!'
     return render_template('imc.html', methods=["GET", "POST"],error=error, imc=imc, height=height, weight=weight)
 
 if __name__ == '__main__':

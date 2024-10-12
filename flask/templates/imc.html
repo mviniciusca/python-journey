@@ -14,6 +14,7 @@
         body {
             font-family: "Inter", sans-serif;
             background-color: #fcfcfc;
+            color: #636369;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,7 +35,6 @@
         }
 
         h2 {
-            color: #333;
             text-align: center;
             margin-bottom: 1.5rem;
         }
@@ -46,7 +46,6 @@
 
         label {
             margin-bottom: 0.5rem;
-            color: #666;
         }
 
         input {
@@ -89,7 +88,6 @@
 
         .icon-big {
             font-size: 24px;
-            color: #333;
         }
     </style>
 </head>
@@ -108,9 +106,13 @@
 
             <button type="submit">Calcular IMC</button>
             <div class="result">
+
                 {% if imc %}
                 {{ imc }}
+                {% else %}
+                Use nossa Calculadora de IMC para determinar seu nível de nutrição.
                 {% endif %}
+
                 {% if error %}
                 <p style="color: red;">{{ error }}</p>
                 {% endif %}
