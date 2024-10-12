@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>IMC Calculator</h1>
+    <form action="/app" method="POST">
+        <label for="height">Height (m)</label>
+        <input type="text" name="height">
+        <label for="weight">Weight (Kg)</label>
+        <input type="text" name="weight">
+        <button type="submit">Send</button>
+    </form>
+
+    {% if imc %}
+    {{ imc }}
+    {% endif %}
+</body>
+
+</html>
