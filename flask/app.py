@@ -12,6 +12,7 @@ def imc():
     error = None
     height = None
     weight = None
+    imc = None
 
     if request.method == 'POST':
         height = request.form['height']
