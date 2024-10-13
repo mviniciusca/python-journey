@@ -97,10 +97,10 @@
         <h2>Calculadora de IMC</h2>
         <form id="imc-form" method="POST" action="/app">
             <label for="altura">Altura (m):</label>
-            <input type="number" id="height" name="height" value="{% if height %}{{ height }}{% endif %}" required>
+            <input id="height" name="height" value="{% if height %}{{ height }}{% endif %}" required>
 
             <label for="peso">Peso (kg):</label>
-            <input type="number" id="weight" name="weight" value="{% if weight %}{{ weight }}{% endif %}" required>
+            <input id="weight" name="weight" value="{% if weight %}{{ weight }}{% endif %}" required>
 
             <button type="submit">Calcular IMC</button>
             <div class="result">
