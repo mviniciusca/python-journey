@@ -13,13 +13,13 @@ def imc_calc(weight,height):
 def classification(result):
     if result <= 18.5:
             level = 'Abaixo do Peso'
-    elif 18.6 <= result <= 24.9:
+    elif 18.6 <= result <= 24.99:
             level = 'Normal' 
-    elif 25.0 <= result <= 29.9:
+    elif 25 <= result <= 29.99:
             level = 'Sobrepeso'
-    elif 30.0 <= result <= 34.9:
+    elif 30 <= result <= 34.99:
             level = 'Obesidade Grau 1'
-    elif 35.0 <= result <= 39.9:
+    elif 35 <= result <= 39.99:
             level = 'Obesidade Grau 2'
     else:
             level = 'Obesidade Grau 3' 
