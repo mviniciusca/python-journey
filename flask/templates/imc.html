@@ -7,12 +7,11 @@
     <title>Calculadora de IMC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <style>
         body {
-            font-family: "Inter", sans-serif;
+            font-family: 'Roboto Mono', monospace;
             background-color: #fcfcfc;
             color: #636369;
             display: flex;
@@ -68,7 +67,8 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: .9rem;
+            font-family: 'Roboto Mono', monospace;
         }
 
         button:hover {
@@ -93,19 +93,19 @@
 </head>
 
 <body>
+    <a href="/">
+        <button>Homepage</button>
+    </a>
     <div class="container">
-        <a href="/">
-            <button>Voltar à Home</button>
-        </a>
         <h2>Calculadora de IMC</h2>
         <form id="imc-form" method="POST" action="/app">
             <label for="altura">Altura (m):</label>
-            <input type="number" id="height" name="height" value="{% if height %}{{ height }}{% endif %}" required
-                step="0.01" min="0">
+            <input type="number" placeholder="exemplo: 1,80" id="height" name="height"
+                value="{% if height %}{{ height }}{% endif %}" required step="0.01" min="0">
 
             <label for="peso">Peso (kg):</label>
-            <input type="number" id="weight" name="weight" value="{% if weight %}{{ weight }}{% endif %}" required
-                step="0.1" min="0">
+            <input type="number" placeholder="exemplo: 80,5" id="weight" name="weight"
+                value="{% if weight %}{{ weight }}{% endif %}" required step="0.1" min="0">
 
             <button type="submit">Calcular IMC</button>
             <div class="result">
