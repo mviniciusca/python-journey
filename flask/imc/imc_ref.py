@@ -18,9 +18,9 @@ def classification(result):
     elif 25.0 <= result <= 29.9:
             level = 'Sobrepeso'
     elif 30.0 <= result <= 34.9:
-            level = 'Obesidade Grau 3'
+            level = 'Obesidade Grau 1'
     elif 35.0 <= result <= 39.9:
-            level = 'Obesidade Grau 3'
+            level = 'Obesidade Grau 2'
     else:
             level = 'Obesidade Grau 3' 
     return level
